@@ -8,8 +8,8 @@ I will start with a simple interface with 3 buttons.<br>
 2. The Timeline button will feature the actual timeline from Legends and Cannon. This will help me and others to know which books I currently have, which will be marked or crossed, and which books I'm still missing to complete my collection. It can also be a simple list or search.
 3. This one is still in development.
 
-Things to do
-[ ] Complete homepage adding all the books read until this day.
-[ ] Complete the whole Star Wars timeline merging the Legends and Cannon timelines creating a new, hybrid timeline.
-[ ] Brainstorming for the remaining button.
-[ ] Give it a nice UX.
+#### Things to do
+- [ ] Complete homepage adding all the books read until this day.
+- [ ] Complete the whole Star Wars timeline merging the Legends and Cannon timelines creating a new, hybrid timeline.
+- [ ] Brainstorming for the remaining button.
+- [ ] Give it a nice UX.
