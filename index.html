@@ -1,182 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>My Books</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-}
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-
-/* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-/* Place the container to the left */
-.left {
-  left: 0;
-}
-
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .timeline::after {
-  left: 31px;
-  }
-  
-  /* Full-width containers */
-  .container {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
-  }
-  
-  /* Make sure that all arrows are pointing leftwards */
-  .container::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-  }
-
-  /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-  left: 15px;
-  }
-  
-  /* Make all right containers behave like the left ones */
-  .right {
-  left: 0%;
-  }
-}
-
-/* Style the navbar */
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Navbar links */
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-/* Page content */
-.contentnav {
-  padding: 16px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .contentnav {
-  padding-top: 60px;
-}
-
-</style>
 </head>
 <body>
     <!--navbar-->
     <div id="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
+        <a href="index.html">Timeline</a>
+        <a href="collection.html">Collection</a>
         <a href="#contact">Contact</a>
       </div>
       <!--               -->
@@ -185,42 +20,154 @@ body {
   <div class="container left">
     <div class="content">
       <h2>January 10</h2>
-      <p><b>The Mandalorian Armor.</b><br><i>Book 1 of The Bounty Hunter Wars.</i> This is a great book full of 
+      <p><b>The Mandalorian Armor</b><br><i>Book 1 of The Bounty Hunter Wars.</i> This is a great book full of 
         suprises and twists in the story. Things that you wouldn't expect to happen. It was actually the first book 
-        I read that gave me a full view of Boba Fett, the notorious bounty hunter.</p>
-      <p>image here or maybe a star-based rating</p>
+        I read that gave me a full view of Boba Fett, the notorious bounty hunter. This is a must if you want to 
+        know what happened to Boba after being eaten by a Sarlacc in Episode 6: Return of the Jedi.</p>
+        <!--Star-based rating-->
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
     </div>
   </div>
   <div class="container right">
     <div class="content">
       <h2>January 13</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+      <p><b>Slave Ship</b><br><i>Book 2 of The Bounty Hunter Wars.</i> Good book. Features the rise of Bossk to
+      power after he kills his dad, as is the trandoshan way. This leads to the Bounty Hunters' Guild to split
+      into two factions, the True Guild, which is comprised of the older bounty hunters, and the Guild Reform Committe,
+      which is primarily comprised of the younger bounty hunters lead by Bossk. Reaching the end of the book, Xizor
+      makes an unlikely alliance with a subnode. This was the first time I read a book featuring the bounty of a 
+      stormtrooper.</p>
+        <!--Star-based rating-->
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
     </div>
   </div>
   <div class="container left">
     <div class="content">
-      <h2>2015</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+      <h2>January 15</h2>
+      <p><b>Hard Merchandise</b><br><i>Book 3 of The Bounty Hunter Wars.</i> This was a great book. To see Boba
+      Fett struggle throughout several parts of the book was very interesting, considering he's regarded as the 
+      best bounty hunter. In the last book of the series, Jeter (the author) really got into it, making the final 
+      book exciting.</p>
+        <!--Star-based rating-->
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
     </div>
   </div>
   <div class="container right">
     <div class="content">
-      <h2>2012</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+      <h2>January 18</h2>
+      <p><b>A New Dawn</b><br> Great book that gives you details about the characters in the Rebels series. Kanan 
+      really behaves as a Jedi hiding from the empire after order 66. To see him change from a miserable man 
+      consumed by sorrow and regret who does not help others so that the empire can't find hunt him to a Jedi who 
+      know the true path is very cool. And it gets better once he meets with Hera and the adventure begins aboard 
+      the Ghost. I recommend reading this book before watching Rebels.</p>
+        <!--Star-based rating-->
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
     </div>
   </div>
   <div class="container left">
     <div class="content">
-      <h2>2011</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+      <h2>January 20</h2>
+      <p><b>Lords of the Sith</b><br> Hands down one of <i>the</i> greatest books I've read in my entire life! 
+      To see (in my imagination) the emperor and Vader fighting together for survival was awesome. In this book 
+      I found out that some of the best clones were promoted to Imperial Guards, so even years after the end of 
+      the war there were clones still in service. The power of both, the emperor and Vader, was described 
+      explicitly with several adventures in their quest for safety after being shot down by rebels.</p>
+          <!--Star-based rating-->
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
     </div>
   </div>
   <div class="container right">
     <div class="content">
-      <h2>2007</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+      <h2>January 21</h2>
+      <p><b>Dark Lord: The Rise of Darth Vader</b><br> Awesome book! I'm an all-time fan of Vader and this book 
+      totally kills it! There was a time where I wondered how Anakin got used to the suit and all its enhancement 
+      and life support. Well, this book tells you that and more. Anakin Skywalker was proficient in 6 of the 7 
+      lighsaber forms, but he favored Form IV. After his defeat against Obi-wan, Anakin, now Vader, had different 
+      speed, strength and mobility, thus requiring a new form of combat. So Vader creates a hybrid of Form II 
+      and Form V, which enabled him to fight better in his new suit. This book also explores the process of how 
+      Vader got used to his suit, as well finding out a couple of things that he could no longer do and other 
+      things that he could now do. The films and series portray Darth Vader as the invincible Sith Lord, but 
+      they fail to show the audience how he got there.</p>
+            <!--Star-based rating-->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
     </div>
   </div>
+  <div class="container left">
+      <div class="content">
+        <h2>January 28</h2>
+        <p><b>Heir to the Jedi</b><br> Great book that portrays a couple of adventures and a mission of Luke 
+        Skywalker as he begins to use his powers. In this book we see a young Luke who is learning how to control 
+        the Force. I believe this book is quite important because we only see a great change of Luke's powers 
+        from one movie to another. This makes people wonder how Luke got so good in such a short time, but in reality
+        it took him a while and intense training.</p>
+            <!--Star-based rating-->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+      </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+          <h2>February 9</h2>
+          <p><b>The Old Republic: Revan</b><br> The. Coolest. Book. Ever! Every true fan loves the Old Republic 
+          times and to see Revan in action is breathtaking. Revan is one of the most powerful Jedi/Sith in history. 
+          He shares first place with Darth Vader as my two #1 characters. Revan was a Jedi Knight who led other 
+          Jedi, known as Revanchists, in the Mandalorian Wars. He defeated Mandalore the Ultimate in single-combat 
+          and activated the Mass Shadow Generator, ending the Mandalorian Wars. Revan goes into the Unknown Regions 
+          and delays the Sith Emperor from attacking the Republic. Revan was known as the prodigal knight due to 
+          the fact that he went from Jedi Knight to Sith Lord and back. This book gave chills. Literal chills, 
+          guys.</p>
+                <!--Star-based rating-->
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+        </div>
+      </div>
+      <div class="container left">
+          <div class="content">
+            <h2>February 17</h2>
+            <p><b>Death Troopers</b><br> Awesome book! An imperial prison barge breaks down and it's stranded, but 
+            hope appears to come as they encount a star destroyer drifting in space, seemingly abandoned. The characters 
+            find out that there is a deadly virus aboard the stranded ship. About the middle section of the book, the 
+            doctor goes to the isolation cells and sets free Han Solo and Chewbacca. Han and Chewie attempt to escape 
+            the infected destroyers, now knowing full well that the deadly virus kills the host and turns it ito a 
+            zombie. Great thriller with lots of suspense.</p>
+                <!--Star-based rating-->
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+          </div>
+        </div>
 </div>
 
 </body>
